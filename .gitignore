@@ -1,0 +1,11 @@
+
+Thumbs.db
+desktop.ini
+
+.DS_Store
+
+.vscode/
+
+.idea/
+*.swp
+*.sublime-project
