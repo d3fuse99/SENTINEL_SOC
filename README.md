@@ -1,47 +1,51 @@
-# Cyber-Sentinel: SOC Dashboard v9.9
+# Cyber-Sentinel: SOC Dashboard
 
-<img width="2554" height="1352" alt="image" src="https://github.com/user-attachments/assets/6b2ec164-f7d7-402f-be3e-432d53e73e93" />
+<img width="2554" height="1320" alt="image" src="https://github.com/user-attachments/assets/749180f0-d73f-415f-87d0-826ae7270235" />
+
 
 ## About
 
-**Cyber-Sentinel SOC** is a high-performance, real-time Security Operations Center (SOC) dashboard simulation. It is designed to visualize network traffic logs, analyze incoming threats, and demonstrate automated defensive countermeasures in a cyberpunk-styled terminal interface.
+**Cyber-Sentinel SOC** is a high-performance, real-time Security Operations Center (SOC) dashboard simulation. This specialized client-side build runs entirely in your web browser with zero external dependencies, making it perfect for lightweight deployments, static hosting, and instant demonstrations.
 
-Built with a focus on speed and visual clarity, this tool allows security enthusiasts to observe how different attack vectors impact a system and how a modern SOC environment identifies and mitigates them.
+This dashboard emulates real-time system metrics, streams simulated network packets, and analyzes incoming malicious traffic patterns entirely on the client side.
 
 ---
 
 ## Features
 
-*   **Real-time Monitoring:** Live Log Terminal streaming inbound requests with advanced filtering.
-*   **8+ Attack Vectors:** Built-in simulation for Bruteforce, SQLi, DDoS, XSS, Ransomware, Phishing, Port Scanning, and Zero-Day exploits.
-*   **Global Attack Feed:** A dedicated real-time panel tracking the origin country, timestamp, and type of every threat.
-*   **Network Analytics:** Integrated HTML5 Canvas for dynamic Network Load (PPS) visualization.
-*   **Autonomous Defense:** An AI-driven "Auto-Pilot" mode that generates randomized threats for continuous system testing.
-*   **Multi-Language UI:** Seamless instant toggle between English and Russian interfaces.
-*   **Interactive Tooltips:** Deep-dive descriptions for every attack vector to explain security risks.
+*   **Real-time Metrics:** Simulated network load and system performance chart (HTML5 Canvas).
+*   **Packet Analyzer:** Deep packet analysis with dynamic logs classification (Normal vs Threat).
+*   **Threat Injection Sandbox:** Interactive panel to manually trigger Bruteforce, SQL Injection, and DDoS attacks.
+*   **Incident Feed:** Real-time log tracking with threat signature recognition, geolocations, and mitigation scores.
+*   **Zero-Server Log Uploading:** Local parser engine that allows you to drag and drop real access logs (Nginx/Apache format) and analyze them directly in your browser.
+*   **IPS Mitigation Log:** Tracks automatic block actions and network gateway mitigations.
+*   **Localization:** Built-in multi-language translation controller (English / Russian).
 
 ---
 
 ## How to run
 
-1. Clone the repository: 
-2. Open the directory:
-3. Run the project: Simply open `index.html` in any modern web browser.
+1. Clone the repository or download the source files.
+2. Ensure the files are structured in the same folder as follows:
+   * index.html
+   * style.css
+   * script.js
+3. Open `index.html` by double-clicking it, or run it through the VS Code Live Server extension.
 
-**Note:** For the best visual experience, a screen resolution of 1920x1080 is recommended. The dashboard is fully optimized for Chrome, Firefox, and Edge.
+No installation of Node.js, Docker, or npm dependencies is required.
 
 ---
 
 ## Tech stack
 
-*   **HTML5** — semantic structure and layout
-*   **CSS3** — custom grid system with neon-cyberpunk UI components
-*   **Vanilla JavaScript** — core logic and real-time data processing
-*   **Canvas API** — high-performance network load graphing
-*   **Zero-Dependency** — no external libraries required for maximum speed
+*   **HTML5** — Semantic markup and layout structure
+*   **CSS3** — Custom Grid layouts, neon-cyberpunk UI skins, and layout responsiveness
+*   **Vanilla JavaScript** — Real-time event orchestration, parsing algorithms, and language translation
+*   **Canvas API** — Real-time performance chart rendering
+*   **File API** — Client-side asynchronous file uploading and processing
 
 ---
 
 ## Project structure
 
-<img width="296" height="134" alt="image" src="https://github.com/user-attachments/assets/7c83b300-9db1-4e03-bef9-2e46f8d8e8aa" />
+<img width="301" height="232" alt="image" src="https://github.com/user-attachments/assets/75c48d12-3a7f-4465-8292-f7379e005af2" />
