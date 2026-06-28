@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER-SENTINEL SOC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="soc-container">
+        <header>
+            <div class="logo">SENTINEL_SOC</div>
+            <div class="header-right">
+                <div class="status-indicator" id="conn-status" style="color: var(--neon-green)">WEBSOCKET: SIMULATED</div>
+                <div id="clock">00:00:00</div>
+                <button class="btn-lang" onclick="toggleLanguage()">EN / RU</button>
+            </div>
+        </header>
+
+        <aside class="panel sidebar">
+            <div class="panel-header lang-target" data-key="sys_metrics">System Metrics</div>
+            <div class="chart-container">
+                <canvas id="metrics-chart"></canvas>
+            </div>
+            <div class="metrics-text">
+                CPU: <span id="cpu-val">0%</span> | RAM: <span id="ram-val">0%</span>
+            </div>
+
+            <div class="panel-header lang-target" data-key="log_uploader">Upload Real Logs</div>
+            <div class="upload-zone" id="drop-zone">
+                <p class="lang-target" data-key="drag_drop">Drag & Drop access.log here or click to select</p>
+                <input type="file" id="file-input" style="display: none;" accept=".log,.txt">
+            </div>
+
+            <div class="panel-header lang-target" data-key="threat_inj">Threat Injection (Sandbox)</div>
+            <div class="control-box">
+                <button class="btn" onclick="inject('BRUTEFORCE')">SSH Bruteforce</button>
+                <button class="btn" onclick="inject('SQLI')">SQL Injection</button>
+                <button class="btn" onclick="inject('DDOS')">DDoS Flood</button>
+            </div>
+        </aside>
+
+        <section class="panel feed-panel">
+            <div class="panel-header lang-target" data-key="feed_header">Security Incident Feed</div>
+            <div id="attack-feed"></div>
+        </section>
+
+        <section class="panel terminal-panel">
+            <div class="panel-header lang-target" data-key="term_header">Live Packet Monitor</div>
+            <div id="log-stream"></div>
+        </section>
+
+        <aside class="panel stats-panel">
+            <div class="panel-header lang-target" data-key="statistics">Threat Analytics</div>
+            <div class="stat-box">
+                <span class="lang-target" data-key="analyzed_lines">Analyzed Lines</span>
+                <span id="stat-total" class="stat-val">0</span>
+            </div>
+            <div class="stat-box alert">
+                <span class="lang-target" data-key="threats_count">Threats Blocked</span>
+                <span id="stat-threats" class="stat-val">0</span>
+            </div>
+        </aside>
+
+        <section class="panel report-panel" style="grid-column: span 2;">
+            <div class="panel-header lang-target" data-key="report_header">Deep Packet Inspection Analysis</div>
+            <div class="report-content">
+                <div>
+                    <span class="lang-target" data-key="rep_type">Attack Signature</span>: <span id="rp-type" class="highlight">NONE</span><br>
+                    <span class="lang-target" data-key="rep_ip">Origin IP</span>: <span id="rp-ip">--</span>
+                </div>
+                <div>
+                    <span class="lang-target" data-key="rep_loc">Inferred Location</span>: <span id="rp-loc">--</span><br>
+                    <span class="lang-target" data-key="rep_score">Threat Level</span>: <span id="rp-score">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel response-panel">
+            <div class="panel-header lang-target" data-key="actions_header">Active IPS Mitigations</div>
+            <div id="event-log"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
