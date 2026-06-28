@@ -1,0 +1,13 @@
+{
+  "name": "cyber-sentinel-pro",
+  "version": "1.0.0",
+  "description": "Production-grade SOC Dashboard with real log parsing and WS metrics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.0"
+  }
+}
